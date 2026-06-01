@@ -99,6 +99,15 @@
     .tab-content { display: none; }
     .tab-content.active { display: block; }
 
+    /* Knockout tab breaks out of the 960px container to use full viewport width */
+    #tab-knockout {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      margin-left: -50vw;
+      padding: 0 2rem;
+    }
+
     /* ================================================
        KNOCKOUT BRACKET
        ================================================ */

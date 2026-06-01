@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>World Cup 2026 Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="worldcup2026.css"/>
+</head>
+<body>
+
+  <header>
+    <div class="trophy"><img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/FIFA_World_Cup_Icon_%28Campionato_mondiale_di_calcio%29.svg" alt="FIFA World Cup Trophy" class="trophy-img" /></div>
+    <div>
+      <h1>Joel's World Cup 2026 Predictor</h1>
+      <p>USA · Canada · Mexico &nbsp;|&nbsp; 11 June – 19 July &nbsp;|&nbsp; All times AEST (Sydney)</p>
+    </div>
+  </header>
+
+  <div class="tabs">
+    <button class="tab-btn active" onclick="showTab('fixtures', event)">Fixtures</button>
+    <button class="tab-btn"        onclick="showTab('standings', event)">Standings</button>
+    <button class="tab-btn"        onclick="showTab('knockout', event)">Knockout</button>
+  </div>
+
+  <div class="container">
+
+    <!-- ===== FIXTURES TAB ===== -->
+    <div id="tab-fixtures" class="tab-content active">
+      <div class="filter-bar">
+        <label>Filter:</label>
+        <select id="filterGroup" onchange="renderFixtures()">
+          <option value="">All Groups</option>
+        </select>
+        <input type="text" id="filterTeam" placeholder="Search team…" oninput="renderFixtures()" />
+        <button class="btn-cancel" onclick="clearAllResults()">Clear All Results</button>
+      </div>
+      <div id="fixtures-container"><p class="loading">Loading fixtures…</p></div>
+    </div>
+
+    <!-- ===== STANDINGS TAB ===== -->
+    <div id="tab-standings" class="tab-content">
+      <div id="standings-container"><p class="loading">Loading standings…</p></div>
+    </div>
+
+    <!-- ===== KNOCKOUT TAB ===== -->
+    <div id="tab-knockout" class="tab-content">
+      <div id="knockout-container"><p class="loading">Loading fixtures…</p></div>
+    </div>
+
+  </div>
+
+<script src="worldcup2026.js"></script>
+  
+</body>
+</html>
